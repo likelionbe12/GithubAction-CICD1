@@ -1,0 +1,24 @@
+name: Manual Workflow1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Show current time
+        run: date
+
+      - name: Show system info
+        run: uname -a
+
+      - name: Multiple commands
+        run: |
+          echo "Running multiple commands"
+          pwd
+          ls -la
+          echo "Current date and time: $(date)"
